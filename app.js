@@ -23,3 +23,41 @@ function form(x) {
     }
 
 
+    const imgArray = [
+
+        {
+            url: "image/image 1.png"
+        },
+
+        
+        {
+            url: "image/image 2.png"
+        },
+
+        
+        {
+            url: "image/image 3.png"
+        },
+
+        
+        {
+            url: "image/image 4.png"
+        }
+
+    ];
+
+    function project() {
+        const project = document.getElementById('project');
+
+        const div = document.createElement('div');
+
+        for (const x of imgArray) {
+            const divImg = document.createElement('div');
+            divImg.classList.add('project-file');
+            divImg.innerHTML = `
+            <img src="${x.url}" alt="">
+            `
+            project.appendChild(divImg);
+        }
+        
+    }
